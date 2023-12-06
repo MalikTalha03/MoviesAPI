@@ -3,6 +3,7 @@ const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
 const router = require('./routes/routes');
+const bodyParser = require('body-parser');
 
 const mongoString = process.env.CONNURL;
 
@@ -20,9 +21,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/api', router);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //select an available port
-const port = process.env.PORT 
+const port = process.env.PORT
 app.listen(port, () => {
     console.log("Server started at port " + port + "");
 });
