@@ -25,6 +25,7 @@ router.get('/movies/:id', async(req, res) => {
 );
 
 router.post('/movies', async(req, res) => {
+    
     const movie = new Model({
         name: req.body.name,
         genre: req.body.genre,
