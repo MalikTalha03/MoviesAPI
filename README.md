@@ -8,6 +8,16 @@ This is a simple API that allows you to store movies (names, publisher, year, ge
 
 To install the API, you need to have [Node.js](https://nodejs.org/en/) installed on your computer. Then, you need to clone the repository and install the dependencies.
 
+After cloning the repository, you need to create a file called ".env" in the root directory of the project and add the following line:
+
+```bash
+CONNURL=mongodb://localhost:27017
+```
+```bash
+PORT=3000
+```
+
+
 ```bash
 git clone
 cd MoviesAPI
