@@ -47,7 +47,7 @@ npx nodemon index.js
         "publisher": "Frank Darabont",
         "year": 1994,
         "genre": "Drama",
-        "poster": "https://www.imdb.com/title/tt0111161/mediaviewer/rm3894689280/"
+        "poster": ""
     },
     {
         "_id": "5f9b7b7b7b7b7b7b7b7b7b7c",
@@ -55,12 +55,15 @@ npx nodemon index.js
         "publisher": "Francis Ford Coppola",
         "year": 1972,
         "genre": "Crime",
-        "poster": "https://www.imdb.com/title/tt0068646/mediaviewer/rm3894689280/"
+        "poster": ""
     }
 ]
 ```
 
 ### Get a movie
+
+Poster attribute is image and stored in base64 format. So you need to decode it to get the image.
+And also before sending the request you need to encode the image to base64 format.
 
 #### Request
 
@@ -75,7 +78,7 @@ npx nodemon index.js
     "publisher": "Frank Darabont",
     "year": 1994,
     "genre": "Drama",
-    "poster": "https://www.imdb.com/title/tt0111161/mediaviewer/rm3894689280/"
+    "poster": ""
 }
 ```
 
@@ -91,7 +94,7 @@ npx nodemon index.js
     "publisher": "Frank Darabont",
     "year": 1994,
     "genre": "Drama",
-    "poster": "https://www.imdb.com/title/tt0111161/mediaviewer/rm3894689280/"
+    "poster": ""
 }
 ```
 
@@ -104,7 +107,7 @@ npx nodemon index.js
     "publisher": "Frank Darabont",
     "year": 1994,
     "genre": "Drama",
-    "poster": "https://www.imdb.com/title/tt0111161/mediaviewer/rm3894689280/"
+    "poster": ""
 }
 ```
 
@@ -120,7 +123,7 @@ npx nodemon index.js
     "publisher": "Frank Darabont",
     "year": 1994,
     "genre": "Drama",
-    "poster": "https://www.imdb.com/title/tt0111161/mediaviewer/rm3894689280/"
+    "poster": ""
 }
 ```
 
@@ -133,7 +136,7 @@ npx nodemon index.js
     "publisher": "Frank Darabont",
     "year": 1994,
     "genre": "Drama",
-    "poster": "https://www.imdb.com/title/tt0111161/mediaviewer/rm3894689280/"
+    "poster": ""
 }
 ```
 
@@ -152,7 +155,7 @@ npx nodemon index.js
     "publisher": "Frank Darabont",
     "year": 1994,
     "genre": "Drama",
-    "poster": "https://www.imdb.com/title/tt0111161/mediaviewer/rm3894689280/"
+    "poster": ""
 }
 ```
 
