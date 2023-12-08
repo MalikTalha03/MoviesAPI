@@ -205,7 +205,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## Support
 
 For support, email
-[**Malik Talha**](mailto:mtnaqshbandi2003@gmail.com?subject=[GitHub]%20MoviesAPI%20Support)
+[**Malik Talha**](mailto:mtnaqshbandi2003@gmail.com)
 
 ## Project Status
 
