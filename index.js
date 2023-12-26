@@ -4,9 +4,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const router = require('./routes/routes');
 const bodyParser = require('body-parser');
-import cookieParser from "cookie-parser";
-import Auth from './routes/auth.js';
-
+const cookieParser = require('cookie-parser');
+const Auth = require('./routes/auth');
 const mongoString = process.env.CONNURL;
 
 mongoose.connect(mongoString, 
