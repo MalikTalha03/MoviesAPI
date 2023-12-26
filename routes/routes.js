@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const Model = require('../models/model');
+const jwtver = require('../middleware/jwtverify');
 
+router.get('/movies', jwtver ,async(req, res) => {
 
-router.get('/movies', async(req, res) => {
     try {
         const movies = await Model.find();
         res.json(movies);
@@ -14,7 +15,7 @@ router.get('/movies', async(req, res) => {
 }
 );
 
-router.get('/movies/:id', async(req, res) => {
+router.get('/movies/:id', jwtver ,async(req, res) => {
     try {
         const movie = await Model.findById(req.params.id);
         res.json(movie);
@@ -25,7 +26,7 @@ router.get('/movies/:id', async(req, res) => {
 }
 );
 
-router.post('/movies', async(req, res) => {
+router.post('/movies', jwtver ,async(req, res) => {
     
     const movie = new Model({
         name: req.body.name,
@@ -45,7 +46,7 @@ router.post('/movies', async(req, res) => {
 }
 );
 
-router.patch('/movies/:id', async(req, res) => {
+router.patch('/movies/:id', jwtver ,async(req, res) => {
     try {
         const updatedMovie = await Model.updateOne(
             { _id: req.params.id },
@@ -59,7 +60,7 @@ router.patch('/movies/:id', async(req, res) => {
 }
 );
 
-router.delete('/movies/:id', async(req, res) => {
+router.delete('/movies/:id', jwtver ,async(req, res) => {
     try {
         const removedMovie = await Model.deleteOne({ _id: req.params.id });
         res.json(removedMovie);
