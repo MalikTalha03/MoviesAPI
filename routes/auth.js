@@ -1,9 +1,9 @@
-import express from "express";
+const express = require("express");
+const { check } = require("express-validator");
+const  validate  = require("../middleware/validate");
+const { register,login } = require("../controllers/auth");
 
-import { validate } from "../middleware/validate.js";
-import { check } from "express-validator";
-import { register } from "../controllers/auth.js";
-import { register, login } from "../controllers/auth.js";
+
 
 const router = express.Router();
 
@@ -14,8 +14,8 @@ router.post("/register",
         check("password", "Please enter a password with 6 or more characters").isLength({ min: 6 })
     ], 
     validate, 
-    register);
-
+    register
+);
 router.post("/login", 
     [
         check("email", "Please include a valid email").isEmail(),
@@ -24,5 +24,4 @@ router.post("/login",
     validate, 
     login);
 
-export default router;
-
+module.exports = router;
