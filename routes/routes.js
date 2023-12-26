@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Model = require('../models/model');
 
+
 router.get('/movies', async(req, res) => {
     try {
         const movies = await Model.find();
