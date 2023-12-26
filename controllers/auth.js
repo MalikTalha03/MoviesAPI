@@ -19,8 +19,10 @@ const login = async (req, res) => {
         }
 
         const token = await user.generateAuthToken();
-        console.log(token)
-        res.cookie('jwt', token, { httpOnly: true, secure: false });
+        res.cookie('jwt', token, { 
+            httpOnly: true, 
+            secure: false,
+            maxAge: 100000 });
         res.status(200).json({ message: 'User logged in successfully',
         token:token });
     } catch (error) {
