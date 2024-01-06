@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const router = require('./routes/routes');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const Auth = require('./routes/auth');
 const mongoString = process.env.CONNURL;
 
 mongoose.connect(mongoString, 
